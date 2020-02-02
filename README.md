@@ -1,2 +1,1 @@
-# Algorithm
- algorithm problem solving
+# baek-jun
