@@ -40,7 +40,7 @@ def query(a, tree, node, start, end, left, right):
 
 #제일큰 직사각형넓이 갱신
 def largest(a, tree, start, end):
-    stack,max_area=[(start,end)],0
+    stack, max_area=[(start,end)],0
     n=len(a)
     while stack:
         start,end=stack.pop()
