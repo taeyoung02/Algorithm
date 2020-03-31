@@ -29,6 +29,6 @@ for i in range(m*2):
             if e==a or e==b or e==c:
                 continue
         
-        print('1')
-        exit(0)
+            print('1')
+            exit(0)
 print('0')
