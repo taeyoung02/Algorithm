@@ -21,7 +21,7 @@ for i in range(1,n+1): #입력으로 주어진 순서를 따르도록 인접행�
 q=deque()
 q.append(1)
 
-check=[0,1]+[0]*(n+1)
+check=[0]*(n+1)
 result=[1]
 
 def dfs(x):
