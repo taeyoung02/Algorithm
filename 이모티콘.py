@@ -1,7 +1,7 @@
 from collections import deque
 k = int(input())
 
-dist=[[0]*2001 for i in range(2001)]
+dist=[[0]*10001 for i in range(10001)]
 def bfs(ans):
     q=deque()
     dist[1][0]=0
