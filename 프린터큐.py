@@ -19,3 +19,15 @@ for i in range(test):
             cnt+=1
         else:
             arr.append(arr.pop(0))
+
+            ada_param_grid = {'base_estimator__max_depth':[1,50],
+          'base_estimator':[DecisionTreeClassifier(max_features=2), 
+                            DecisionTreeClassifier(max_features=10)]}
+
+ada_grid = GridSearchCV(estimator = AdaBoostClassifier(), param_grid= ada_param_grid, scoring=ftwo_scorer, verbose=1, n_jobs=-1, cv=5,)
+ada_grid.fit(X_trainVal, y_trainVal)
+print('Gridsearch by using f2 score')
+print('best parameter : {}'.format(ada_grid.best_params_))
+print('best f2 score of CV : {:.3f}'.format(ada_grid.best_score_))
+print('best f2 score of test set:{:.3f}'.format(ada_grid.score(X_test, y_test)))
+print("최고 성능 모델:\n", ada_grid.best_estimator_)
